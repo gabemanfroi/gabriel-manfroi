@@ -1,0 +1,37 @@
+@import '../../../scss/globals/variables';
+.LeftContainer {
+    grid-column: 1/1;
+    display: flex;
+    height: 100%;
+    padding: 2rem 0;
+    padding-left: 1rem;
+
+    .Navbar {
+        box-shadow: 0 12px 30px 0 black;
+        background-color: $dark-gray;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        ul {
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+            li {
+                & > *.active {
+                    color: $primary-500;
+                }
+            }
+        }
+        & > * {
+            color: $text-white !important;
+            &:last-child {
+                margin-bottom: 0.8rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import '../../scss/globals/variables';
+
+.ResumeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem 0;
+
+    .Resume {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
+        width: 100%;
+
+        height: 100%;
+        @media (min-width: 576px) {
+            max-width: 540px;
+        }
+        @media (min-width: 768px) {
+            max-width: 720px;
+        }
+        @media (min-width: 992px) {
+            max-width: 960px;
+        }
+        @media screen and(min-width: 1200px) {
+            max-width: 1140px;
+        }
+    }
+}
