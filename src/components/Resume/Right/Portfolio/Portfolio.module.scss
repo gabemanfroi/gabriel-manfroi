@@ -1,0 +1,33 @@
+@import '../../../../scss/globals/variables';
+.PortfolioSection {
+    height: 100%;
+    .PortfolioContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        justify-items: center;
+        overflow-y: scroll;
+        max-height: 700px;
+        padding: 36px;
+        padding-bottom: 80px;
+
+        .PotfolioItem {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            position: relative;
+            max-height: 150px;
+
+            a {
+                box-shadow: $main-box-shadow;
+                height: 100%;
+
+                img {
+                    height: auto;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

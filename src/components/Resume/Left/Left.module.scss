@@ -7,7 +7,7 @@
     padding-left: 1rem;
 
     .Navbar {
-        box-shadow: 0 12px 30px 0 black;
+        box-shadow: $main-box-shadow;
         background-color: $dark-gray;
         flex-grow: 1;
         display: flex;
