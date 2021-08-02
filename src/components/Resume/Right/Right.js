@@ -1,16 +1,18 @@
+import { useContext } from 'react';
+import { CurrentSectionContext } from '../../../contexts/CurrentSectionContext';
+import About from './About/About';
+import Portfolio from './Portfolio/Portfolio';
 import classes from './Right.module.scss';
+import Skills from './Skills/Skills';
 
 export default function Right() {
+    const { currentSection } = useContext(CurrentSectionContext);
+
+    const sections = [<About />, <Portfolio />, <Skills />];
+
     return (
         <div className={classes.RightContainer}>
-            <div className={classes.RightContent}>
-                <p style={{ color: '#888888' }}>
-                    Well-qualified Full Stack Developer familiar with wide range of programming utilities and languages.
-                    Knowledgeable of backend and frontend development requirements. Handles any part of process
-                    withAddress ease. Collaborative team player with excellent technical abilities offering 5 years of
-                    related experience.
-                </p>
-            </div>
+            <div className={classes.RightContent}>{sections[currentSection]}</div>
         </div>
     );
 }

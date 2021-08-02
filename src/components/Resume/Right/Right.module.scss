@@ -11,24 +11,5 @@
         background: $dark-gray;
         padding-left: 35px;
         padding-top: 50px;
-        p {
-            font-size: 15px;
-            line-height: 1.73;
-            padding-right: 30px;
-            text-align: left;
-            padding-bottom: 30px;
-            position: relative;
-
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 30px;
-                height: 1px;
-                background-color: white;
-                opacity: 0.09;
-            }
-        }
     }
 }
