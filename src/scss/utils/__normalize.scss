@@ -1,50 +1,65 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
-    font-weight: 400 !important;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+  font-weight: 400 !important;
 }
 
-*::-webkit-scrollbar {
-    display: none;
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: hsla(0, 0%, 34%, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: hsla(0, 0%, 34%, 0.9);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 34%, 0.2);
+}
+::-webkit-scrollbar-thumb:active {
+  background: hsla(0, 0%, 34%, 0.2);
 }
 
 body {
-    margin: 0;
-    background: $body-background;
-    color: $text-white;
+  margin: 0;
+  background: $body-background;
+  color: $text-white;
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 a,
 ul {
-    text-decoration: none;
-    list-style: none;
-    color: $text-white;
+  text-decoration: none;
+  list-style: none;
+  color: $text-white;
 }
 
 ul {
-    li {
-        & > * {
-            margin: 0.3rem 0;
-            transition: all ease 0.2s;
-            &:hover {
-                color: $primary-500;
-                transition: all ease 0.2s;
-                cursor: pointer;
-            }
-        }
-    }
-}
-
-a {
-    transition: all ease 0.2s;
-    &:hover {
+  li {
+    & > * {
+      margin: 0.3rem 0;
+      transition: all ease 0.2s;
+      &:hover {
         color: $primary-500;
         transition: all ease 0.2s;
         cursor: pointer;
+      }
     }
+  }
+}
+
+a {
+  transition: all ease 0.2s;
+  &:hover {
+    color: $primary-500;
+    transition: all ease 0.2s;
+    cursor: pointer;
+  }
 }

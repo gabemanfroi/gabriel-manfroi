@@ -1,45 +1,56 @@
 @import '../../../scss/globals/variables';
 .CenterContainer {
-    grid-column: 2/6;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: center;
-    background-image: url('https://w5.foxdsgn.com/niko/black/wp-content/uploads/sites/4/2019/03/niko_img.jpg');
-    background-size: cover;
+  grid-column: 2/6;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  position: relative;
+
+  box-shadow: $main-box-shadow;
+  z-index: 2;
+
+  &::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
     background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: $main-box-shadow;
-    z-index: 2;
+    background-position: bottom 0px right -270px;
+    height: 100%;
+    width: 100%;
+    background-size: 200%;
+    background-image: url('../../../assets/img/gabriel.png');
+    filter: brightness(50%) grayscale(50%);
+  }
 
-    .InfoContainer {
-        margin-bottom: 2.3rem;
+  .InfoContainer {
+    margin-bottom: 2.3rem;
 
-        p {
-            font-size: 30px;
-            margin-bottom: 0;
-        }
-        span {
-            color: $primary-400;
-        }
-        .SocialMediaWrapper {
-            margin-top: 0.3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            & > * {
-                color: $text-white;
-                & > * {
-                    margin: 0 0.5rem;
-                    transition: all ease 0.2s;
-                    &:hover {
-                        color: $primary-500;
-                        transition: all ease 0.2s;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
+    p {
+      font-size: 30px;
+      margin-bottom: 0;
     }
+    span {
+      color: $primary-400;
+    }
+    .SocialMediaWrapper {
+      margin-top: 0.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & > * {
+        color: $text-white;
+        & > * {
+          margin: 0 0.5rem;
+          transition: all ease 0.2s;
+          &:hover {
+            color: $primary-500;
+            transition: all ease 0.2s;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
 }
